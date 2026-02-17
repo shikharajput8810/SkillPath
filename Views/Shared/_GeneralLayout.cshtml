@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="~/Content/js/bootstrap.bundle.min.js"></script>
+    <link href="~/Content/css/all.css" rel="stylesheet"/>
+    <style>
+        .bg-mycolor {
+            background: #241c49; /*#FF1744 #FF6D00*/
+        }
+        .text-mycolor {
+            color: #241c49 !important;
+        }
+        .header{
+            min-height:40px;
+            padding-top:10px;
+        }
+        .ic {
+            font-size: 20px;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid #241c49;
+            color: #241c49;
+            transition: .5s;
+        }
+        .ic1 {
+            font-size: 20px;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid #fff7f1;
+            color: #fff7f1;
+            transition: .5s;
+        }
+        .ic:hover {
+            background: #FF6D00;
+            color: white;
+            transition: .5s;
+            transform: rotate(360deg);
+        }
+        #menu ul li a{
+            color:white;
+            font-size:18px;
+        }
+        .sliderimg{
+            height:500px;
+        }
+        .servicesimg{
+            height:150px;
+        }
+        .servicescard:hover{
+            transform:scale(1.1);
+            transition:2s;
+        }
+        .servicescard{
+            transition:2s;
+        }
+        .ufooter{
+            min-height:200px;
+        }
+        .bfooter{
+            height:50px;
+        }
+        .fact{
+            min-height:250px;
+        }
+        .gallery{
+            min-height:300px;
+        }
+        .team{
+            min-height:300px;
+        }
+        .factic{
+            height:80px;
+            width:80px;
+            border:1px solid grey;
+            border-radius:50%;
+            font-size:40px;
+            line-height:70px;
+            transition:2s;
+            padding:5px;
+            text-align:center;
+        }
+            .factic:hover {
+                background: #241c49;
+                color: white;
+                transition: 2s;
+            }
+        .imgpic{
+            height:200px;
+        }
+        .footermenu{
+
+        }
+        .webtext{
+            font-size:15px;
+        }
+        .txtname{
+            line-height:50px;
+        }
+        .login{
+            margin-top:100px;
+            margin-bottom:100px;
+        }
+        .teamimg{
+           height:350px;
+        }
+        .imgservice{
+            height:120px;
+        }
+        .serviceic {
+            font-size: 12px;
+            color: #FF1744 !important;
+        }
+        .directorimg
+        {
+            height:350px;
+        }
+        .userimg{
+            height:120px;
+            width:120px;
+            border-radius:50%;
+            border:1px solid black;
+        }
+        .btn-mycolor {
+            background: #241c49;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!--Start header-->
+        <div class="row header shadow-lg" style="border-bottom: 5px solid #241c49; background:#ff6a000e">
+            <div class="col-sm-10 mx-auto">
+                <div class="row py-1">
+                    <div class="col-sm-3 fs-2">
+                        SKILL<b class="text-mycolor">PATH<i class="fa-solid fa-graduation-cap"></i></b>
+                    </div>
+                    <div class="col-sm-3">
+                        <b><i class="fa-solid fa-phone ic"></i> Call Us</b> : <br />8388101611 | 7890234139
+                    </div>
+                    <div class="col-sm-3">
+                        <b><i class="fa-solid fa-envelope ic"></i> Mail Us</b> : <br />sr6655303@gmail.com 
+                    </div>
+                    <div class="col-sm-3 pt-1 text-end">
+                        <i class="fa-brands fa-facebook-square ic"></i>
+                        <i class="fa-brands fa-youtube-square ic"></i>
+                        <i class="fa-brands fa-instagram-square ic"></i>
+                        <i class="fa-brands fa-linkedin-in ic"></i>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end header-->
+    <!--Start menu-->
+    <div class="row bg-mycolor sticky-top shadow-lg" style="position:sticky !important;top:0px !important">
+        <div class="col-sm-10 mx-auto p-0">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div id="menu" class="mx-auto">
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/home/index">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/home/about">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/home/services">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/home/contact">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/home/team">Our Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/home/opening">Current Openings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/home/apply">Apply For Job</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/home/login" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Login
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item text-dark text-mycolor" href="/home/login">Admin Login</a></li>
+                                        <li><a class="dropdown-item text-dark text-mycolor" href="/home/Emplogin">Employee Login</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-disabled="false" href="/home/application">My Application</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--End menu-->
+    </div>
+    <div style="min-height:500px;">
+        @RenderBody()
+    </div>
+    <!--ufooter Start-->
+    <div class="container-fluid bg-dark">
+        <div class="row ufooter">
+            <div class="col-sm-10 mx-auto">
+                <div class="row">
+                    <div class="col-sm-3 p-3 text-light">
+                        <p class="fs-5">Contact Address</p>
+                        <p class="m-0">Hussanganj Ring Road,Lucknow 226001</p><br />
+                        <span><i class="fa-solid fa-phone"></i>+91 8388101611</span><br />
+                        <span><i class="fa-solid fa-phone"></i>+91 7856734523</span><br />
+                        <span><i class="fa-solid fa-envelope mb-2"></i>Sr6655303@gmail.com</span><br />
+                        <i class="fa-brands fa-facebook ic1"></i>
+                        <i class="fa-brands fa-instagram ic1"></i>
+                        <i class="fa-brands fa-twitter ic1"></i>
+                        <i class="fa-brands fa-whatsapp-square ic1"></i>
+                    </div>
+                    <div class="col-sm-3 p-3 text-light">
+                        <p class="footermenu"><i class="fa-solid fa-angle-right"></i><a href="/home/index" style="color:white; text-decoration:none;">  Home</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-angle-right"></i><a href="/home/about" style="color:white; text-decoration:none;">  About Us</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-angle-right"></i><a href="/home/services" style="color:white; text-decoration:none;">  Service</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-angle-right"></i><a href="/home/contact" style="color:white; text-decoration:none;">  Contact</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-angle-right"></i><a href="/home/team" style="color:white; text-decoration:none;">  Team</a></p>
+                        
+                    </div>
+                    <div class="col-sm-3 p-3 text-light">
+                        <p class="footermenu"><i class="fa-solid fa-angle-right"></i><a href="/home/opening" style="color:white; text-decoration:none;">  Opening List</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-angle-right"></i><a href="/home/login" style="color:white; text-decoration:none;">  Admin Login</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-angle-right"></i><a href="/home/emplogin" style="color:white; text-decoration:none;">  Employee Login</a></p>
+                        <p class="footermenu"><i class="fa-solid fa-angle-right"></i><a href="/home/apply" style="color:white; text-decoration:none;">  Apply For Job</a></p>
+                    </div>
+                    <div class="col-sm-3 p-3 text-light">
+                        <p class="fs-5">About Website:</p>
+                        <p class="webtext">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--ufooter End-->
+    <!--bfooter Start-->
+    <div class="container-fluid">
+        <div class="row bfooter bg-dark bfooter text-light text-center border-top border-light pt-3">
+            <div class="col-sm-6">Developer By: <b class="text-primary">Shikha Rajput</b> </div>
+            <div class="col-sm-6">
+                Copyright &copy; To : <b class="text-light"><a href="https://www.techpile.in/">Techpile Technology Private Limited</a></b>
+            </div>
+        </div>
+    </div>
+    <!--bfooter End-->
+</body>
+</html>

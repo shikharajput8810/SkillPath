@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+<form method="post">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 mx-auto p-3 shadow-lg rounded-4 login">
+                <h3 class="text-center mt-4">Admin Login <b class="text-mycolor">Form...<i class="fa-solid fa-key"></i></b></h3>
+                <div class="input-group flex-nowrap mt-4">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" name="userid" placeholder="Enter Your UserId" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <div class="input-group flex-nowrap mt-4">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" name="password"  placeholder="Enter Your Password" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <input type="submit" value="Login Now" class="bg-mycolor text-light form-control mt-4" />
+
+            </div>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,52 @@
+﻿@using System.Data
+@{
+    ViewBag.Title = "Opening";
+    Layout = "~/Views/Shared/_GeneralLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <div class="row py-2">
+            <p class="fs-3 text-center">Our Current <b class="text-mycolor">Job Opening</b></p>
+            <hr class="mx-auto w-30"/>
+        </div>
+        <!--Start Job Opening Section-->
+        <div class="row">
+            @foreach (DataRow row in ViewBag.opening.Rows)
+            {
+            <div class="col-sm-6">
+                <!--Start opening card-->
+                <div class="card text-center mb-2">
+                    <div class="card-header">
+                        <i class="fa-solid fa-calendar-days text-mycolor"></i>&nbsp;Posted On:@row["startdate"]
+                        <span class="badge text-bg-success">@row["status"]</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@row["title"]</h5>
+                        <p class="card-text">@row["detail"]</p>
+                        <div class="row">
+                            <div class="col-sm-4">Job Type:@row["jobtype"]</div>
+                            <div class="col-sm-4">City:@row["City"]</div>
+                            <div class="col-sm-4">Shift:@row["shift"]</div>
+                            <div class="col-sm-4">Total Opening:@row["vacancy"]</div>
+                            <div class="col-sm-4">Salary:@row["minsalary"] to @row["maxsalary"]</div>
+                            <div class="col-sm-4">Required Exp.:@row["exp"]</div>
+                        </div>
+                        <div class="row">
+                            Educational Qualification:@row["education"]
+                        </div>
+                        <a href="/home/apply?jobid=@row["id"]&title=@row["title"] (@row["id"])" class="btn btn-primary">Apply Now</a>
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                        <i class="fa-solid fa-calendar-days text-mycolor"></i>&nbsp;Expires On:@row["lastdate"]
+                    </div>
+                </div>
+            </div>
+
+            <!--End opening card-->
+            }
+        </div>
+        <!--End Job Opening Section-->
+    </div>
+</div>
+

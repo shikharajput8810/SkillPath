@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Employee Profile";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+<style>
+    .userimg 
+    {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+</style>
+@foreach (System.Data.DataRow row in ViewBag.user.Rows)
+{
+<div class="container-fluid">
+    <div class="row py-2">
+        <p class="fs-3 text-center">Welcome,<b class="text-mycolor"> Profile Page</b></p>
+        <div class="col-sm-8 mx-auto">
+            <div class="row py-3">
+            <div class="col-sm-6 mx-auto">
+                <div class="card mx-auto shadow-lg border border-0 rounded-4 mt-5" style="min-height:400px;">
+                    <img src="~/Content/profile/@row["picture"]" class="img-fluid userimg position-absolute start-50 top-0 translate-middle" />
+                    <h3 class="text-center" style="margin-top:70px;">@row["name"]</h3>
+                    <p class="text-center m-0"><i class="fa-solid fa-envelope"></i>&nbsp;@row["email"]</p>
+                    <p class="text-center m-1"><i class="fa-solid fa-phone"></i>&nbsp;@row["mobno"]</p>
+                    <div class="row g-0 ps-3 pt-3">
+                        <div class="col-3">
+                            Education 
+                        </div>
+                        <div class="col-sm-9">
+                            @row["qualificaiton"]
+                        </div>
+                    </div>
+                    <div class="row g-0 ps-3 pt-3">
+                        <div class="col-3">
+                            Salary:
+                        </div>
+                        <div class="col-sm-9">
+                            @row["salary"]
+                        </div>
+                    </div>
+                    <div class="row g-0 ps-3 pt-3">
+                        <div class="col-3">
+                            Experience:
+                        </div>
+                        <div class="col-sm-9">
+                            @row["exp"]
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+}
+

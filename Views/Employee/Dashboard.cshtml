@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Dashedboard";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row py-2">
+        <!--Start heading-->
+        <p class="fs-3 text-center">
+            Welcome <b class="text-mycolor">to DashBoard</b><br />
+            <span class="fs-5">a reader will be distracted by the readable content</span>
+            <hr class="w-25 mx-auto" />
+        </p>
+        <!--End heading-->
+        <div class="col-sm-10 mx-auto">
+            <div class="row py-3">
+                <!--card start-->
+                <div class="col-sm-4" id="dashcol">
+                    <a href="/employee/attendance">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-plus dashic" style="background-color:#FFCCBC"></i></div>
+                            <h4 class="text-center mb-5">Mark Attendance</h4>
+
+
+                        </div>
+                    </a>
+                </div>
+                <!--card end-->
+                <!--card start-->
+                <div class="col-sm-4" id="dashcol">
+                    <a href="/employee/leaveapplication">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-arrow-down-short-wide dashic" style="background-color:#FFCCBC"></i></div>
+                            <h4 class="text-center mb-5">Apply for Leave</h4>
+
+
+                        </div>
+                    </a>
+                </div>
+                <!--card end-->
+                <!--card start-->
+                <div class="col-sm-4" id="dashcol">
+                    <a href="/employee/leaveapplicationstatus">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-list-ol dashic" style="background-color:#FFCCBC"></i></div>
+                            <h4 class="text-center  mb-5">Leave Status</h4>
+                        </div>
+                    </a>
+                </div>
+                <!--card end-->
+            </div>
+            <!--card start-->
+            <div class="row py-3">
+                <div class="col-sm-4" id="dashcol">
+                    <a href="/employee/changepassword">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-lock dashic" style="background-color:#FFCCBC"></i></div>
+                            <h4 class="text-center  mb-5">Change Password</h4>
+
+
+                        </div>
+                    </a>
+                </div>
+                <!--card end-->
+                <!--card start-->
+                <div class="col-sm-4" id="dashcol">
+                    <a href="/employee/profile">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid fa-file-word dashic" style="background-color:#FFCCBC"></i></div>
+                            <h4 class="text-center mb-5">My Profile</h4>
+
+
+                        </div>
+                    </a>
+                </div>
+                <!--card end-->
+                <!--card start-->
+                <div class="col-sm-4" id="dashcol">
+                    <a href="/employee/logout">
+                        <div class="card mx-auto shadow-lg border border-0 rounded-2 dashcard">
+                            <div class="text-center dashdiv"><i class="fa-solid  fa-arrow-right-from-bracket dashic" style="background-color:#FFCCBC"></i></div>
+                            <h4 class="text-center mb-5">Logout</h4>
+
+
+                        </div>
+                    </a>
+                </div>
+                <!--card end-->
+            </div>
+
+        </div>
+    </div>
+</div>
+

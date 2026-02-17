@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "LeaveApplication";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+<form method="post" enctype="multipart/form-data">
+
+    <div class="container-fluid">
+        <div class="row py-2">
+            <div class="col-sm-12">
+                <p class="fs-3 text-center">
+                    Apply For
+                    <b class="text-mycolor">
+                        Leave
+                    </b>
+                </p>
+                <hr class="mx-auto w-30" />
+            </div>
+
+            <!--appliocation form starts-->
+            <div class="col-sm-6 mt-3 shadow mb-5 p-3 bg-white rounded mx-auto">
+                <h4 class="text-center"> Leave Application Form</h4>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingsubject" name="subject" placeholder="" required>
+                    <label for="floatingsubject">Leave Subject</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <textarea name="detail" class="form-control" placeholder="Leave a comment here" required id="floatingDetails" style="height: 200px; resize:none"></textarea>
+                    <label for="floatingDetails">Leave Details</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="floatingFrom" name="fromdate" required placeholder="">
+                    <label for="floatingfrom">From Date</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="floatingto" name="todate" required placeholder="">
+                    <label for="floatingto">To Date</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="file" class="form-control" id="floatingfile" name="file" placeholder="">
+                    <label for="floatingfile">Attachment(If Any)</label>
+                </div>
+
+                <input type="submit" class="btn btn-danger" value="Send Application" />
+            </div>
+            <!--appliocation form starts-->
+
+        </div>
+    </div>
+
+</form>

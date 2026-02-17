@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+@if (Session["emp"] == null)
+            {
+                <script>
+                    alert('Login First');
+                    location.href='/home/emplogin'
+                </script>
+            }
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/js/bootstrap.bundle.min.js"></script>
+    <link href="~/Content/css/all.css" rel="stylesheet" />
+    <style>
+        .ic {
+            font-size: 20px;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid #241c49;
+            color: #241c49;
+            transition: .5s;
+        }
+        .bg-mycolor {
+            background: #241c49;
+        }
+
+        .text-mycolor {
+            color: #241c49 !important;
+        }
+
+        .dashdiv {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .dashic {
+            height: 55px;
+            width: 55px;
+            border-radius: 8px;
+            border: 1px solid gray;
+            padding: 5px;
+            line-height: 45px;
+            font-size: 28px;
+        }
+
+        #dashcol a {
+            text-decoration: none;
+        }
+
+        .dashcard {
+            transition: 2s;
+        }
+
+            .dashcard:hover {
+                transition: 2s;
+                transform: scale(1.1);
+            }
+    </style>
+</head>
+<body>
+    <!--Start header-->
+    <div class="row header shadow-lg" style="border-bottom:5px solid #FF6D00; background:#ff6a000e;">
+        <div class="col-sm-10 mx-auto">
+            <div class="row py-3">
+                <div class="col-sm-3 fs-2">
+                    SKILL<b class="text-mycolor">PATH<i class="fa-solid fa-graduation-cap"></i></b>
+                </div>
+                <div class="col-sm-3">
+                    <b><i class="fa-solid fa-phone ic"></i>Call Us</b>:<br />
+                    +91 8907645678 | 7986567890
+                </div>
+                <div class="col-sm-3">
+                    <b><i class="fa-solid fa-envelope ic"></i>Mail Us</b>:<br />
+                    sr6655303@gmail.com
+                </div>
+                <div class="col-sm-3 pt-1 text-end">
+                   <b>@Session["emp"]</b>
+                    <i class="fa-solid fa-bars fs-3 ps-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></i>
+                </div>
+            </div>
+        </div>
+        <!--End header-->
+        <!--start Menu-->
+        
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">SKILL<b class="text-mycolor">PATH</b></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="list-group border-0">
+                    <li class="list-group-item border-0">
+                        <a href="/employee/Dashboard" style="text-decoration:none;color:black;"><i class="fa-solid fa-bars"></i>  DashBoard</a>
+                    </li>
+                    <li class="list-group-item border-0">
+                        <a href="/employee/attendance" style="text-decoration:none;color:black;"><i class="fa-solid fa-bars"></i>  Attendance</a>
+                    </li>
+                    <li class="list-group-item border-0">
+                        <a href="/employee/changepassword" style="text-decoration:none;color:black;"><i class="fa-solid fa-bars"></i>  Change Password</a>
+                    </li>
+                    <li class="list-group-item border-0">
+                        <a href="/employee/leaveapplication" style="text-decoration:none;color:black;"><i class="fa-solid fa-bars"></i>  Leave Application</a>
+                    </li>
+                    <li class="list-group-item border-0">
+                        <a href="/employee/leaveapplicationstatus" style="text-decoration:none;color:black;"><i class="fa-solid fa-bars"></i>  Leave Application Status</a>
+                    </li>
+                    <li class="list-group-item border-0">
+                        <a href="/employee/Profile" style="text-decoration:none;color:black;"><i class="fa-solid fa-bars"></i>  Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--End Menu-->
+        <div style="min-height:600px;">
+            @RenderBody()
+        </div>
+
+        <div class="row bfooter bg-dark bfooter text-light text-center border-top border-light py-3">
+            <div class="col-sm-6">Developer By: <b class="text-light">Shikha Rajput</b> </div>
+            <div class="col-sm-6">
+                Copyright &copy; To : <b class="text-mycolor"><a href="https://www.techpile.in/">Techpile Technology Private Limited</a></b>
+            </div>
+        </div>
+</body>
+</html>
+
